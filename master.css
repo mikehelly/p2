@@ -1,0 +1,10 @@
+.lock {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width:600px;
+}
+
+.blackbg {
+	background-color: #000;
+}
