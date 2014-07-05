@@ -1,6 +1,22 @@
 <?php
 
+$words = array(
+    'apples',
+    'ranges',
+    'milk',
+    'cream',
+    'long',
+    'table'
+    );
+
 $i = 0;
+
+$random = $words[array_rand($words)];
+
+while ($i > 0 && $i < 4) {
+    echo $random;
+    $i++;
+}
 
 /*
 if($time >= 5 && $time < 11) {
