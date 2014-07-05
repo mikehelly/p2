@@ -2,9 +2,43 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-    width:600px;
+    width: 600px;
+    height: 800px;
+    position: relative;
+    background-image: url("lock_white.png");
 }
 
 .blackbg {
 	background-color: #000;
+}
+
+.content {
+	text-align: center;
+	padding-top: 320px;
+}
+
+.passwordbox {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #939597;
+	width: 75%;
+	height: 50px;
+}
+
+.password {
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #fff;
+	padding-top: 20px;
+}
+
+h1 {
+	font-family: 'Kameron', serif;
+	font-weight: 700;
+}
+
+h2 {
+	font-family: 'Kameron', serif;
+	font-weight: 400;
+	margin-top: 20px;
 }
