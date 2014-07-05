@@ -28,28 +28,32 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
         <h1 class="white">xkcd password generator</h1>
 
-        <h2>your password is:<h2>
+        <h2>your password is:</h2>
 
-        <h3 class="passwordbox password"><?php echo $random; ?></h3>
+        <h3 class="passwordbox password"><?php show_random() ?></h3>
 
-        <form method='POST' action='index.php'>
-            
-            <label for="numberofwords"># of Words</label>
-            <input type="text" name="numberofwords" id="number_of_words"><br>
-            <label for="include_a_number">Include a #</label>
+        <form name="options" method="POST" action="index.php">
+
+            <label for="number_of_words"># of Words</label>
+            <input type="text" name="number_of_words" id="number_of_words"><br>
+            <label for="include_a_number">Include a Number</label>
             <input type="checkbox" name="include_a_number"><br>
             <label for="special_character">Use a Special Character</label>
             <input type="checkbox" name="special_character"><br>
             <label for="uppercase">First Letter Uppercase</label>
             <input type="checkbox" name="uppercase"><br>
 
-            <input type="submit" class="button" value="generate">
+            <input type="submit" class="button" value="generate" onclick="#">
 
         </form>
 
     </div>
 
     </div>
+
+<pre>
+    <?php print_r($_POST); ?>
+</pre>
 
 </body>
 </html>
