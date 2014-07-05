@@ -14,13 +14,27 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
     
     <link href="master.css" rel="stylesheet" type="text/css" />
 
+    <link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body class="blackbg">
 
-<img class="lock" src="lock_white.png" />
+    <div class="lock">
 
-</div>
+    <div class="content">
+
+        <h1>xkcd password generator</h1>
+
+        <h2>your password is:<h2>
+
+            <h3 class="passwordbox password">PASSWORD-HERE</h3>
+
+    </div>
+
+    </div>
 
 </body>
 </html>
