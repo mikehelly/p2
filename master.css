@@ -5,7 +5,7 @@
     width: 600px;
     height: 800px;
     position: relative;
-    background-image: url("lock_white.png");
+    background-image: url("lock_gray.png");
 }
 
 .blackbg {
@@ -32,6 +32,21 @@
 	padding-top: 20px;
 }
 
+.button {
+	background-color: #F16521;
+	width: 120px;
+	height: 50px;
+	color: #fff;
+	font-family: 'Kameron', serif;
+	font-weight: 700;
+	font-size: 125%;
+	margin-top: 20px;
+}
+
+#number_of_words {
+			width: 40px;
+		}
+
 h1 {
 	font-family: 'Kameron', serif;
 	font-weight: 700;
@@ -41,4 +56,17 @@ h2 {
 	font-family: 'Kameron', serif;
 	font-weight: 400;
 	margin-top: 20px;
+}
+
+.orange {
+	color: #FC956D;
+}
+
+.white {
+	color: #fff;
+}
+
+label {
+	font-family: 'Kameron', serif;
+	font-weight: 400;
 }
