@@ -7,11 +7,11 @@ while ($i > 0 && $i < 4) {
 }
 */
 
-function show_random() {
+function wn1() {
 
     $words = array(
-    'apples',
-    'oranges',
+    'apple',
+    'orange',
     'milk',
     'cream',
     'long',
@@ -19,7 +19,7 @@ function show_random() {
     'odd',
     'uneven',
     'basketball',
-    'outdoors',
+    'outdoor',
     'path',
     'way',
     'eat',
@@ -28,12 +28,12 @@ function show_random() {
     'mister',
     'wants',
     'field',
-    'trees',
+    'tree',
     'full',
     'left',
     'optimized',
     'dog',
-    'leaves',
+    'leaf',
     'wall',
     'new',
     'ghost',
@@ -73,64 +73,34 @@ function show_random() {
     'zebra',
     'forest',
     'beaver',
-    'zoo'
+    'zoo',
+    'clean',
+    'type',
+    'skateboard',
+    'album'
     );
 
-    if( $_POST['number_of_words'] == 1 ) {
-        echo $words[array_rand($words)];
-    }
-    if( $_POST['number_of_words'] == 2 ) {
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-    }
-    elseif( $_POST['number_of_words'] == 3 ) {
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-    }
-    elseif( $_POST['number_of_words'] == 4 ) {
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-    }
-    elseif( $_POST['number_of_words'] == 5 ) {
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-    }
-    elseif( $_POST['number_of_words'] == 6 ) {
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-    }
-    elseif( $_POST['number_of_words'] == '' ) {
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-        echo $words[array_rand($words)];
-    }
+    
+    
+    echo $words[array_rand($words)];
 }
 
+function show_random_number() {
 
-/*
-if($time >= 5 && $time < 11) {
-        $color = '#865f86';
-    }
-    elseif ($time >= 11 && $time < 16) {
-        $color = '#2c87c8';
-    }
-    elseif ($time >= 16 && $time < 20) {
-        $color = '#c7b02f';
-    }
-    else {
-    	$color = '#180629';
-    }
-*/
+    $numbers = array(
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '0'
+        );
+
+    echo $numbers[array_rand($numbers)];
+}
 
 ?>
