@@ -30,12 +30,12 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
         <h2>your password is:</h2>
 
-        <h3 class="passwordbox password"><?php show_random() ?></h3>
+        <h3 class="passwordbox password"><?php echo wn1() ?></h3>
 
         <form name="options" method="POST" action="index.php">
 
             <label for="number_of_words"># of Words</label>
-            <input type="text" name="number_of_words" id="number_of_words"><br>
+            <input type="text" name="number_of_words" id="number_of_words" value="1"><br>
             <label for="include_a_number">Include a Number</label>
             <input type="checkbox" name="include_a_number"><br>
             <label for="special_character">Use a Special Character</label>
