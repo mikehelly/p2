@@ -25,6 +25,8 @@ function show_random() {
 
     global $uppercase;
 
+    global $print;
+
     $words = array(
     'apples',
     'oranges',
@@ -90,6 +92,18 @@ function show_random() {
     'forest',
     'beaver',
     'zoo'
+    );
+
+$capitals = array(
+    'Apples',
+    'Oranges',
+    'Milk',
+    'Cream',
+    'Long',
+    'Table',
+    'Odd',
+    'Uneven',
+    'Basketball'
     );
 
 $dashwords = array(
@@ -188,6 +202,7 @@ $specialcharacters = array(
     //number of words 1
     if( $number_of_words == 1 ) {
         echo $words[array_rand($words)];
+        return $print;
     }
     //number of words 2
     elseif( $number_of_words == 2 ) {
@@ -239,9 +254,10 @@ $specialcharacters = array(
     if( $special_character == 'on' ) {
         echo $specialcharacters[array_rand($specialcharacters)];
     }
+    /*
     //first letter uppercase
-    /*if( $special_character == 'on' ) {
-        echo ucfirst($words[array_rand($words)]);
+    if( $uppercase == 'on' ) {
+        ucfirst(call_user_func('show_random'));
     }
     */
 }
