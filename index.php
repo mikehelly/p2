@@ -51,6 +51,12 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
     </div>
 
+    <div>
+
+        <img class="description" src="password_strength_504.png" />
+
+    </div>
+
 <pre>
     <?php print_r($_POST); ?>
 </pre>
