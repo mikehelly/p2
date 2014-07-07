@@ -9,9 +9,21 @@ while ($i > 0 && $i < 4) {
 
 if(isset($_POST['number_of_words'])){ $number_of_words = $_POST['number_of_words']; }
 
+if(isset($_POST['include_a_number'])){ $include_a_number = $_POST['include_a_number']; }
+
+if(isset($_POST['special_character'])){ $special_character = $_POST['special_character']; }
+
+if(isset($_POST['uppercase'])){ $uppercase = $_POST['uppercase']; }
+
 function show_random() {
 
     global $number_of_words;
+
+    global $include_a_number;
+
+    global $special_character;
+
+    global $uppercase;
 
     $words = array(
     'apples',
@@ -160,6 +172,19 @@ $numbers = array(
     '0'
     );
 
+$specialcharacters = array(
+    '!',
+    '@',
+    '#',
+    '$',
+    '%',
+    '^',
+    '&',
+    '*',
+    '(',
+    ')'
+    );
+
     //number of words 1
     if( $number_of_words == 1 ) {
         echo $words[array_rand($words)];
@@ -206,6 +231,19 @@ $numbers = array(
         echo $dashwords[array_rand($dashwords)];
         echo $dashwords[array_rand($dashwords)];
     }
+    //use a number on
+    if( $include_a_number == 'on' ) {
+        echo $numbers[array_rand($numbers)];
+    }
+    //use a special character
+    if( $special_character == 'on' ) {
+        echo $specialcharacters[array_rand($specialcharacters)];
+    }
+    //first letter uppercase
+    /*if( $special_character == 'on' ) {
+        echo ucfirst($words[array_rand($words)]);
+    }
+    */
 }
 
 
