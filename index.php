@@ -51,11 +51,17 @@ ini_set('display_errors', 1); # Display errors on page (instead of a log file)
 
     </div>
 
-    <div>
+        <h2 id="center">what is an xkcd password?</h2>
 
+        <div class="description">
+
+            <p class="description">An xkcd password generator produces a password that is both easy to remember and tough to for hackers to crack. My generator can spit out up to 6 word passwords that are actually made up of real words. Add a number or symbol if you're looking to get extra tricky.</p>
+
+        </div>
+
+        <a href="password_strength.png">
         <img class="description" src="password_strength_504.png" />
-
-    </div>
+        </a>
 
 <pre>
     <?php print_r($_POST); ?>
