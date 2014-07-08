@@ -8,5 +8,5 @@ A password generator that produces strings of up to 9 words. Also has the abilit
 
 # Details for teaching team
 
-No login required 
+No login required. 
 words.txt, numbers.txt and special_characters.txt used for password content 
