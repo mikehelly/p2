@@ -1,12 +1,5 @@
 <?php
 
-/*
-while ($i > 0 && $i < 4) {
-    echo $random;
-    $i++;
-}
-*/
-
 if(isset($_POST['number_of_words'])){ $number_of_words = $_POST['number_of_words']; }
 
 if(isset($_POST['include_a_number'])){ $include_a_number = $_POST['include_a_number']; }
@@ -15,267 +8,50 @@ if(isset($_POST['special_character'])){ $special_character = $_POST['special_cha
 
 if(isset($_POST['uppercase'])){ $uppercase = $_POST['uppercase']; }
 
-function show_random() {
+$word_list = file('words.txt');
 
-    global $number_of_words;
+$numbers = file('numbers.txt');
 
-    global $include_a_number;
+$characters = file('special_characters.txt');
 
-    global $special_character;
+global $number_of_words;
 
-    global $uppercase;
+global $include_a_number;
 
-    global $print;
+global $special_character;
 
-    $words = array(
-    'apples',
-    'oranges',
-    'milk',
-    'cream',
-    'long',
-    'table',
-    'odd',
-    'uneven',
-    'basketball',
-    'outdoors',
-    'path',
-    'way',
-    'eat',
-    'restaurant',
-    'people',
-    'mister',
-    'wants',
-    'field',
-    'trees',
-    'full',
-    'left',
-    'optimized',
-    'dog',
-    'leaves',
-    'wall',
-    'new',
-    'ghost',
-    'face',
-    'inspector',
-    'deck',
-    'low',
-    'dirty',
-    'party',
-    'yodel',
-    'capital',
-    'cool',
-    'alright',
-    'rich',
-    'program',
-    'gospel',
-    'preach',
-    'master',
-    'lion',
-    'jungle',
-    'city',
-    'town',
-    'wire',
-    'vindicate',
-    'wonderful',
-    'winter',
-    'weasel',
-    'laughter',
-    'link',
-    'smash',
-    'games',
-    'after',
-    'rectangular',
-    'life',
-    'coding',
-    'umbrella',
-    'zebra',
-    'forest',
-    'beaver',
-    'zoo'
-    );
+global $uppercase;
 
-$capitals = array(
-    'Apples',
-    'Oranges',
-    'Milk',
-    'Cream',
-    'Long',
-    'Table',
-    'Odd',
-    'Uneven',
-    'Basketball'
-    );
+$password = '';
 
-$dashwords = array(
-    '-apples',
-    '-oranges',
-    '-milk',
-    '-cream',
-    '-long',
-    '-table',
-    '-odd',
-    '-uneven',
-    '-basketball',
-    '-outdoors',
-    '-path',
-    '-way',
-    '-eat',
-    '-restaurant',
-    '-people',
-    '-mister',
-    '-wants',
-    '-field',
-    '-trees',
-    '-full',
-    '-left',
-    '-optimized',
-    '-dog',
-    '-leaves',
-    '-wall',
-    '-new',
-    '-ghost',
-    '-face',
-    '-inspector',
-    '-deck',
-    '-low',
-    '-dirty',
-    '-party',
-    '-yodel',
-    '-capital',
-    '-cool',
-    '-alright',
-    '-rich',
-    '-program',
-    '-gospel',
-    '-preach',
-    '-master',
-    '-lion',
-    '-jungle',
-    '-city',
-    '-town',
-    '-wire',
-    '-vindicate',
-    '-wonderful',
-    '-winter',
-    '-weasel',
-    '-laughter',
-    '-link',
-    '-smash',
-    '-games',
-    '-after',
-    '-rectangular',
-    '-life',
-    '-coding',
-    '-umbrella',
-    '-zebra',
-    '-forest',
-    '-beaver',
-    '-zoo'
-    );
+//$dashpassword = '';
 
-$numbers = array(
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '0'
-    );
-
-$specialcharacters = array(
-    '!',
-    '@',
-    '#',
-    '$',
-    '%',
-    '^',
-    '&',
-    '*',
-    '(',
-    ')'
-    );
-
-    //number of words 1
-    if( $number_of_words == 1 ) {
-        echo $words[array_rand($words)];
-        return $print;
-    }
-    //number of words 2
-    elseif( $number_of_words == 2 ) {
-        echo $words[array_rand($words)];
-        echo $dashwords[array_rand($dashwords)];
-    }
-    //number of words 3
-    elseif( $number_of_words == 3 ) {
-        echo $words[array_rand($words)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-    }
-    //number of words 4
-    elseif( $number_of_words == 4 ) {
-        echo $words[array_rand($words)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-    }
-    //number of words 5
-    elseif( $number_of_words == 5 ) {
-        echo $words[array_rand($words)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-    }
-    //number of words 6
-    elseif( $number_of_words == 6 ) {
-        echo $words[array_rand($words)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-    }
-    //number of words empty
-    elseif( $number_of_words == '' ) {
-        echo $words[array_rand($words)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-        echo $dashwords[array_rand($dashwords)];
-    }
-    //use a number on
-    if( $include_a_number == 'on' ) {
-        echo $numbers[array_rand($numbers)];
-    }
-    //use a special character
-    if( $special_character == 'on' ) {
-        echo $specialcharacters[array_rand($specialcharacters)];
-    }
-    /*
-    //first letter uppercase
-    if( $uppercase == 'on' ) {
-        ucfirst(call_user_func('show_random'));
-    }
-    */
+for ($i=0; $i < $number_of_words; $i++) {
+	//echo $word_list[array_rand($word_list)];
+	$password = trim($password); 
+	$password .= $word_list[array_rand($word_list)];
+	//$dashpassword = implode('-', $words[array_rand($words)]);	
 }
 
+	/*
+	if ($i < $number_of_words - 1) {
+		echo 'in the if loop';
+		$password .= $word_list[array_rand($word_list)];
+	}
+	*/
 
-/*
-if($time >= 5 && $time < 11) {
-        $color = '#865f86';
-    }
-    elseif ($time >= 11 && $time < 16) {
-        $color = '#2c87c8';
-    }
-    elseif ($time >= 16 && $time < 20) {
-        $color = '#c7b02f';
-    }
-    else {
-    	$color = '#180629';
-    }
-*/
+	if( $include_a_number == 'on' ) {
+		$password = trim($password);
+		$password .= $numbers[array_rand($numbers)];
+	}
+
+	if( $special_character == 'on' ) {
+		$password = trim($password);
+		$password .= $characters[array_rand($characters)];
+	}
+
+	if ( $uppercase == 'on' ) {
+		$password = ucfirst($password);
+	}
 
 ?>
